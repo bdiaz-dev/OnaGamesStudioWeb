@@ -69,7 +69,9 @@ const amigosPalabras = {
 const thanks = {
   title: '¡Gracias por tu mensaje!',
   para: 'Te responderemos lo antes posible',
-  alert: 'Ahora relajate y seras teletransportado a la pagina principal...'
+  alert: 'Ahora relajate y seras teletransportado a la pagina principal...',
+  button: 'Activa propulsores ahora!',
+  please: '=> Por favor, no recargues la pagina ni te vayas hasta que seas redirigido.'
 }
 
 const spanishError = {

@@ -4,10 +4,11 @@ import Background from '../components/Background'
 
 export default function Index () {
   const currentUrl = window.location.pathname
+  const lang = (navigator.language).substring(0, 2)
   const navigate = useNavigate()
   useEffect(() => {
+    // window.location.reload()
     if (currentUrl.length > 3) return
-    const lang = (navigator.language).substring(0, 2)
     const route = (lang === 'es') ? '../es' : '../en'
     navigate(route, { replace: true })
   }, [])

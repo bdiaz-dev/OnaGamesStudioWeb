@@ -199,6 +199,13 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+dialog {
+  background-color: black;
+  border: solid 2px white;
+  border-radius: 20px;
+  color: white;
+}
+
 
 
 @media (max-width:600px) {

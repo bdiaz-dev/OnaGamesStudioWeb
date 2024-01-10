@@ -69,7 +69,9 @@ const amigosPalabras = {
 const thanks = {
   title: '¡Thanks for your message!',
   para: 'We will reply to you as soon as possible',
-  alert: 'Now relax and you will be teleported to the main page...'
+  alert: 'Now relax and you will be teleported to the main page...',
+  button: 'Turn on boosters now!',
+  please: '=> Please, do not reload the page or leave until you are redirected.'
 }
 
 const englishError = {

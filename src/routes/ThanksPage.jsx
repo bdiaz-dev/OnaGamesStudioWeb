@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 import useTexts from '../hooks/useTexts'
 
 export default function ThanksPage () {
   const { text } = useTexts('thanks')
-  const [count, setCount] = useState(5)
+  const [count, setCount] = useState(11)
   const navigate = useNavigate()
+  const { lang } = useParams()
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const route = '..'
+  //     navigate(route, { replace: true })
+  //   }, 12000)
+  // }, [])
   useEffect(() => {
-    setTimeout(() => {
-      const route = '..'
-      navigate(route, { replace: true })
-    }, 6000)
-  }, [])
-  useEffect(() => {
+    const route = '..'
+    if (count <= 0) navigate(route, { replace: true })
     setTimeout(() => {
       const newCount = (count - 1)
       setCount(newCount)
@@ -25,6 +28,11 @@ export default function ThanksPage () {
       <hr />
       <h5>{text.alert}</h5>
       <h2>{count}</h2>
+      <Link to={`/${lang}`}>
+        <button>
+          {text.button}
+        </button>
+      </Link>
     </>
   )
 }
